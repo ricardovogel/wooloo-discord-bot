@@ -1,16 +1,7 @@
 const Discord = require('discord.js');
 const { RedditSimple } = require('reddit-simple');
 const client = new Discord.Client();
-
-var config;
-try {
-    config = require('./config.json')
-} catch (e) {
-    config = {
-        "prefix": process.env.prefix,
-        "token": process.env.token
-    }
-}
+const config = require('./config.json')
 
 
 client.once('ready', () => {
