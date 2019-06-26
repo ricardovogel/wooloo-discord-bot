@@ -15,7 +15,7 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if (command === 'wooloo') {
+    if (command === 'wooloo' || command === '🐑' || command === ':sheep:') {
         let wooloo = () => {
             RedditSimple.RandomPost('wooloo').then((post) => {
                 let data = post[0].data;
