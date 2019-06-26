@@ -30,6 +30,7 @@ client.on('message', message => {
                 let data = post[0].data;
                 if (data.over_18 || data.pinned || data.is_self) {
                     wooloo();
+                    return;
                 }
                 message.channel.send(`${data.title}\n${data.url}`);
             });
