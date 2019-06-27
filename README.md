@@ -1,5 +1,5 @@
 # Wooloo Discord Bot
-A Discord bot to send you the a random (not-nsfw) picture of Wooloo from /r/wooloo
+A Discord bot to send you a random (not-nsfw) picture of Wooloo from /r/wooloo
 
 ## Getting Started
 To test Wooloo Bot out, join [this server](https://discord.gg/4uzKBZR)
