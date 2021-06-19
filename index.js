@@ -27,7 +27,7 @@ client.on('message', message => {
             });
         };
         wooloo();
-    } else if (command === 'uwu') {
+    } else if (command === '🥺' || command === ':pleading:' || command === ':pleading_face:') {
         message.channel.send(`🥺🥺 If being cute is a crime I'd gladly go to jail 🥺🥺`);
     } else if (command === 'help') {
         message.channel.send(`type ${process.env.prefix}wooloo`);
