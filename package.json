@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/ricardovogel/wooloo-discord-bot#readme",
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "^12.5.3",
     "reddit-simple": "^2.1.1"
   }
 }
