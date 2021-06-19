@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { RedditSimple } = require('reddit-simple');
 const client = new Discord.Client();
-const config = require('./config.json')
+// const config = require('./config.json')
 
 
 client.once('ready', () => {
@@ -10,9 +10,9 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith(config.prefix) || message.author.bot) return;
+    if (!message.content.startsWith(process.env.prefix) || message.author.bot) return;
 
-    const args = message.content.slice(config.prefix.length).split(/ +/);
+    const args = message.content.slice(process.env.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if (command === 'wooloo' || command === '🐑' || command === ':sheep:') {
@@ -30,8 +30,8 @@ client.on('message', message => {
     } else if (command === 'uwu') {
         message.channel.send(`🥺🥺If being cute is a crime I'd gladly go to jail🥺🥺`);
     } else if (command === 'help') {
-        message.channel.send(`type ${config.prefix}wooloo`);
+        message.channel.send(`type ${process.env.prefix}wooloo`);
     }
 });
 
-client.login(config.token);
+client.login(process.env.token);
