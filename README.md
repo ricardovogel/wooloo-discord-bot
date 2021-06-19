@@ -31,4 +31,4 @@ Feel free to open a pull request to make the bot better!
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ricardovogel/wooloo-discord-bot/blob/master/LICENSE.md) file for details.
 
 ## Special thanks
-A special thanks to Dixit for hosting the Wooloo Bot on the sample server, and eternal gratitude to our good friend Wooloo
+Eternal gratitude to our good friend Wooloo
