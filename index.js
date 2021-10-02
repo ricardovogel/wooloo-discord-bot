@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const { RedditSimple } = require('reddit-simple');
 const client = new Discord.Client();
-// const config = require('./config.json')
-
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -15,7 +13,7 @@ client.on('message', message => {
     const args = message.content.slice(process.env.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if (command === 'wooloo' || command === '🐑' || command === ':sheep:') {
+    if (command === 'wooloo' || command === '🐑' || command === ':sheep:' || command === ':wooloo:') {
         let wooloo = () => {
             RedditSimple.RandomPost('wooloo').then((post) => {
                 let data = post[0].data;
@@ -27,10 +25,12 @@ client.on('message', message => {
             });
         };
         wooloo();
+    } else if (command === 'nsfwooloo') {
+        message.channel.send(`I'm not gonna send nsfw pictures of Wooloo what's wrong with you?`);
     } else if (command === '🥺' || command === ':pleading:' || command === ':pleading_face:') {
         message.channel.send(`🥺🥺 If being cute is a crime I'd gladly go to jail 🥺🥺`);
     } else if (command === 'help') {
-        message.channel.send(`type ${process.env.prefix}wooloo`);
+        message.channel.send(`Type ${process.env.prefix}wooloo to see sheepy, type ${process.env.prefix}🥺 to send me to jail.`);
     }
 });
 
