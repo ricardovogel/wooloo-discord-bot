@@ -8,12 +8,10 @@ Setting up Wooloo Bot for your own server:
 1. Set up an application and bot on the [Discord developers page](https://discordapp.com/developers/applications/)
 2. Clone this repo using `git clone https://github.com/ricardovogel/wooloo-discord-bot.git`
 3. Install the dependencies using `npm i`
-4. Set up a `config.json file`. It should look like this:
-```json
-{
-    "prefix": "//",
-    "token": "TOKEN_HERE"
-}
+4. Set up an environment (i.e. with [dotenv](https://www.npmjs.com/package/dotenv)). It should look like this:
+```env
+PREFIX=//
+DISCORD_TOKEN=TOKEN_HERE
 ```
 5. Start the bot using `npm start`
 6. Invite your bot to your server using `https://discordapp.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot`

@@ -8,9 +8,9 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith(process.env.prefix) || message.author.bot) return;
+    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
 
-    const args = message.content.slice(process.env.prefix.length).split(/ +/);
+    const args = message.content.slice(process.env.PREFIX.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if (command === 'wooloo' || command === '🐑' || command === ':sheep:' || command === ':wooloo:') {
@@ -26,12 +26,12 @@ client.on('message', message => {
         };
         wooloo();
     } else if (command === 'nsfwooloo') {
-        message.channel.send(`I'm not gonna send nsfw pictures of Wooloo what's wrong with you?`);
+        message.channel.send(`I'm not gonna send nsfw pictures of Wooloo, what's wrong with you?`);
     } else if (command === '🥺' || command === ':pleading:' || command === ':pleading_face:') {
         message.channel.send(`🥺🥺 If being cute is a crime I'd gladly go to jail 🥺🥺`);
     } else if (command === 'help') {
-        message.channel.send(`Type ${process.env.prefix}wooloo to see sheepy, type ${process.env.prefix}🥺 to send me to jail.`);
+        message.channel.send(`Type ${process.env.PREFIX}wooloo to see sheepy, type ${process.env.PREFIX}🥺 to send me to jail.`);
     }
 });
 
-client.login(process.env.token);
+client.login();
